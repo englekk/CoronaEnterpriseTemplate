@@ -1,0 +1,79 @@
+----------------------------------------
+-- 코로나 SDK 유료 계정 35% 할인 문의: englekk@naver.com
+-- @Author 아폴로케이션 원강민 대표
+-- @Website http://apollocation.com, http://wonhada.com
+----------------------------------------
+
+-- Supported values for orientation:
+-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+
+settings = {
+    build =
+    {
+        neverStripDebugInfo = true
+    },
+    
+    orientation = {
+        default = "portrait",
+        supported = { "portrait", "landscapeLeft", "landscapeRight", "portraitUpsideDown" }
+    },
+    
+    iphone = {
+        plist =
+        {
+            CFBundleIdentifier = "com.wonhada.wonhadacoronatemplate", -- 수정하세요
+            CFBundleDisplayName = "WonHadaCoronaTemplate", -- 수정하세요
+--          MinimumOSVersion="4.0",
+            UIApplicationExitsOnSuspend = false,
+            UIStatusBarHidden = false,
+            UIPrerenderedIcon = true,
+--          UIAppFonts = {
+--              "폰트명.ttf"
+--          },
+            CFBundleIconFile = "Icon.png",
+            CFBundleIconFiles = {
+                "Icon.png",
+                "Icon@2x.png",
+                "Icon-Small-40.png",
+                "Icon-Small-40@2x.png",
+                "Icon-60.png",
+                "Icon-60@2x.png",
+                "Icon-72.png",
+                "Icon-72@2x.png",
+                "Icon-76.png",
+                "Icon-76@2x.png",
+                "Icon-Small-50.png",
+                "Icon-Small-50@2x.png",
+                "Icon-Small.png",
+                "Icon-Small@2x.png"
+            },
+            
+            --[[
+            -- iOS app URL schemes:
+            CFBundleURLTypes =
+            {
+                {
+                    CFBundleURLSchemes =
+                    {
+                        "fbXXXXXXXXXXXXXX", -- example scheme for facebook
+                        "coronasdkapp", -- example second scheme
+                    }
+                }
+            },
+            --]]
+        },
+    },
+    
+    androidPermissions = {
+        "android.permission.INTERNET"
+    },
+
+    -- 각 플랫폼마다 특정 파일들을 빼고 싶다면 수정하세요.
+    -- ex) "Icon.png", *@2x.png"
+    excludeFiles = 
+    {
+       all = {},
+       iphone = {},
+       android = {}
+    },
+}
