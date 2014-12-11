@@ -11,41 +11,12 @@
 -- __appContentHeight__ : App의 높이
 -- 앵커포인트는 좌상단 
 require("CommonSettings")
-
---=====================--
--- tmp 폴더의 모든 파일 삭제
-local lfs = require "lfs"
-local tmpFolder = system.pathForFile("", system.TemporaryDirectory)
-local iter, dir_obj = lfs.dir (tmpFolder)
-local file = dir_obj:next()
-while file do
-	if tostring(file) ~= "." and tostring(file) ~= ".." then
-		os.remove(tmpFolder..file)
-	end
-	file = dir_obj:next()
-end
---=====================--
-
-math.randomseed(os.time())
 ---------------------------------
 -- 여기서부터 코딩하세요. 
---
 
 -- 완전한 풀스크린을 위한 코드
 -- native.setProperty( "androidSystemUiVisibility", "immersive" )
 
--- 전역 변수
-__scaleFactor__ = 0.5 -- 모든 크기의 기준이 되는 비율 기준값
-
-local ImageLoader = require "wonhada.managers.ImageLoader"
-local TPSheetManager = require "wonhada.managers.TPSheetManager"
-local composer = require "composer"
-
--- 이미지 동시 로딩 갯수
-ImageLoader.maxMultiDownloadCount = 5
-
--- 모든 이미지 시트 초기화
---TPSheetManager.init("images", "asset", 0, 1)
-
 -- 시작점
+local composer = require "composer"
 composer.gotoScene("MainSceneStarter")
