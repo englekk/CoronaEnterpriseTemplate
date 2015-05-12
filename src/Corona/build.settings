@@ -14,7 +14,7 @@
 settings = {
     build =
     {
-        neverStripDebugInfo = true
+        neverStripDebugInfo = false
     },
     
     orientation = {

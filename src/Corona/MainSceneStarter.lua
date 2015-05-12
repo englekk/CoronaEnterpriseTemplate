@@ -16,6 +16,10 @@ function scene:show( event )
 	if ( phase == "will" ) then
 	elseif ( phase == "did" ) then
 		-- 첫 씬을 여기서 호출하세요.
+		-- 현재 씬 제거
+		local currScene = composer.getSceneName("current")
+		composer.removeScene(currScene)
+		
 		local options = {
 --			effect = "fade",
 --			time = 300,
