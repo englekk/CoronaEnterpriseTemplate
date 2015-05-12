@@ -27,7 +27,7 @@ settings = {
         {
             CFBundleIdentifier = "com.wonhada.wonhadacoronatemplate", -- 수정하세요
             CFBundleDisplayName = "WonHadaCoronaTemplate", -- 수정하세요
---          MinimumOSVersion="4.0",
+--          MinimumOSVersion="6.0",
             UIApplicationExitsOnSuspend = false,
             UIStatusBarHidden = false,
             UIPrerenderedIcon = true,
